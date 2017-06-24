@@ -1,57 +1,94 @@
-.footer
-    position: relative
-    height: 270px
-    background-image: url('../img/bg-footer.jpg')
+.footer 
+	background: url('../img/bg-footer.jpg') no-repeat center center / cover
+		color: $color-white
+	&-nav
+		padding: 0 
+		margin-top: 0.5em
+		vertical-align: middle
+		display: inline-block 
+		&__item
+			display: inline-block
+			padding: 10px
+			&:after
+				margin-left: 20px
+				content: ''
+				display: inline-block
+				vertical-align: middle
+				border: 3px solid $color-white
+				border-radius: 50%
+			&:last-child:after
+				display: none
+		&__link 
+			color: $color-white
+			&:hover
+				color: $color-green-light
+	&-social
+		display: inline-block
+		float: right
+		margin-top: 1em
+		&__item
+						display: inline-block
+						margin-right: 10px
+		&__link
+						position: relative
+						display: inline-block
+						width: 30px
+						height: 30px
+						border: 1px solid $color-white
+						color: $color-white
+						border-radius: 50%
+						&:hover
+							border-color: $color-green-light
+							color: $color-green-light
+		&__link .fa
+						@extend %cam
+						color: inherit
+	
 
-    .footer-nav
-        width: 100%
-        font-size: 12px
-        color: $color-white
-
-        &__social
-            list-style-type: none
-            float: right
-        
-        &__soc
-            display: inline-block
-
-        &__link
-            color: $color-white
-            text-decoration: none
+	&__copyright
+				text-align: center
+				margin-top: 60px
+				color: $color-white
+				margin-bottom: 0
 
 
-    &__copy
-        position: absolute
-        bottom: 20px
-        margin-bottom: 0
-        color: $color-white
-        font-size: 12px
-        @extend %ham
 
-    .yok-colors
-        position: absolute
-        bottom: 0
-        left: 0
-        right: 0
-        font-size: 0
-        &__item
-            height: 20px
-            width: 20%
-            display: inline-block
+@media (max-width: 485px)
+	.footer-nav
+		text-align: center
+		display: block
+		margin: 0 auto
+	.footer-social
+		display: block
+		float: none	
+		margin: 0 auto
+		text-align: center
+		margin-top: 1em
+	.footer__copy
+		margin-top: 2em	
 
-            &--yellow
-                background-color: $color-yellow
+.yok-colors
+	position: relative
+	bottom: 0
+	left: 0
+	right: 0
+	font-size: 0
+	&__item
+			height: 20px
+			width: 20%
+			display: inline-block
 
-            &--green
-                background-color: #bdf271
+			&--yellow
+					background-color: $color-yellow
 
-            &--turquoise
-                background-color: $color-green-light
+			&--green
+					background-color: #bdf271
 
-            &--blue
-                background-color: $color-green-dark
+			&--turquoise
+					background-color: $color-green-light
 
-            &--dark
-                background-color: #2f2933
+			&--blue
+					background-color: $color-green-dark
 
-            
+			&--dark
+					background-color: #2f2933
