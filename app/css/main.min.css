@@ -11226,13 +11226,13 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%); }
 
-.contact__or, .footer__copy {
+.contact__or {
   left: 50%;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%); }
 
-.welcome__content, .dest .yok-card--small .yok-card__circle, .dest .yok-card--small .yok-card__img {
+.welcome__content, .dest .yok-card--small .yok-card__circle, .dest .yok-card--small .yok-card__img, .footer-social__link .fa {
   display: block;
   position: absolute;
   top: 50%;
@@ -11291,7 +11291,14 @@ body {
   font-family: "Lato", sans-serif;
   overflow-x: hidden;
   opacity: 1;
-  color: #777; }
+  color: #777777; }
+
+a {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+  a:hover {
+    text-decoration: none; }
 
 .img-responsive {
   display: block;
@@ -11311,7 +11318,7 @@ body {
 
 .yok-btn {
   background: #29d9c2;
-  color: #fff;
+  color: #ffffff;
   font-weight: 900;
   text-transform: uppercase;
   padding: 20px 30px;
@@ -11331,7 +11338,7 @@ body {
   transition-property: box-shadow, background, color;
   transition-property: box-shadow, background, color, -webkit-box-shadow; }
   .yok-btn:hover {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     -webkit-box-shadow: inset 0 0 0 4px #01a2a6;
             box-shadow: inset 0 0 0 4px #01a2a6; }
@@ -11342,12 +11349,12 @@ body {
   background: url("../img/bg-welcome.jpg") no-repeat center center/cover; }
   .welcome__content {
     text-align: center;
-    color: #fff;
+    color: #ffffff;
     width: 100%; }
   .welcome__title {
     font-size: 80px;
     text-transform: uppercase;
-    color: #fff; }
+    color: #ffffff; }
   .welcome__text {
     font-size: 18px;
     width: 60%;
@@ -11381,14 +11388,14 @@ body {
   .dest__link-reg {
     position: relative;
     float: right;
-    color: #777;
+    color: #777777;
     padding-left: 25px;
     margin-top: 15px;
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease; }
     .dest__link-reg:hover {
-      color: #777; }
+      color: #777777; }
     .dest__link-reg .fa {
       position: absolute;
       top: 9px;
@@ -11405,7 +11412,7 @@ body {
       .dest__link-place a:hover {
         text-decoration: underline; }
       .dest__link-place a.active {
-        color: #777;
+        color: #777777;
         font-weight: 700; }
   .dest .search {
     position: relative;
@@ -11414,8 +11421,8 @@ body {
     height: 36px;
     -webkit-border-radius: 18px;
             border-radius: 18px;
-    border: 1px solid #777;
-    background-color: #fff;
+    border: 1px solid #777777;
+    background-color: #ffffff;
     padding-left: 40px;
     overflow: hidden; }
     .dest .search__icon {
@@ -11429,7 +11436,7 @@ body {
       outline: none;
       border: none;
       font-size: 14px;
-      color: #777; }
+      color: #777777; }
   .dest .yok-card {
     position: relative;
     width: 100%;
@@ -11448,7 +11455,7 @@ body {
       background-color: rgba(255, 255, 255, 0.93); }
     .dest .yok-card__link {
       position: absolute;
-      color: #fff;
+      color: #ffffff;
       -webkit-transition: all 0.3s ease;
       -o-transition: all 0.3s ease;
       transition: all 0.3s ease;
@@ -11530,7 +11537,7 @@ body {
         .dest .yok-pag__item.active .yok-pag__link {
           color: #01a2a6; }
     .dest .yok-pag__link {
-      color: #777;
+      color: #777777;
       text-decoration: none;
       -webkit-transition: color 0.3s ease;
       -o-transition: color 0.3s ease;
@@ -11556,7 +11563,7 @@ body {
       text-align: center;
       background-image: url("../img/form-head.jpg");
       line-height: 74px;
-      color: #fff; }
+      color: #ffffff; }
     .ittinery .yok-form__container {
       padding: 25px 30px 85px 40px; }
     .ittinery .yok-form__datetime {
@@ -11581,7 +11588,7 @@ body {
       border: 1px solid #d5d57d;
       -webkit-border-radius: 5px;
               border-radius: 5px;
-      background-color: #fff;
+      background-color: #ffffff;
       overflow: hidden;
       padding: 10px 20px 10px 110px;
       -webkit-background-size: contain;
@@ -11668,7 +11675,7 @@ body {
     font-size: 14px;
     color: #29d9c2; }
     .ittinery .yok-list__sort a {
-      color: #777;
+      color: #777777;
       text-decoration: none;
       -webkit-transition: color 0.3s ease;
       -o-transition: color 0.3s ease;
@@ -11687,11 +11694,11 @@ body {
     position: relative;
     width: 100%;
     height: 72px;
-    border: 1px solid #777;
+    border: 1px solid #777777;
     -webkit-border-radius: 5px;
             border-radius: 5px;
-    -webkit-box-shadow: 0 2px 5px #777;
-            box-shadow: 0 2px 5px #777;
+    -webkit-box-shadow: 0 2px 5px #777777;
+            box-shadow: 0 2px 5px #777777;
     margin-top: 20px;
     padding: 0 15px 0 20px;
     font-weight: 300; }
@@ -11732,7 +11739,7 @@ body {
   background-repeat: no-repeat;
   background-position: center bottom;
   padding: 80px 0;
-  color: #fff; }
+  color: #ffffff; }
   .contact:before {
     content: '';
     position: absolute;
@@ -11744,14 +11751,14 @@ body {
   .contact__title {
     text-align: center;
     margin-bottom: 100px;
-    color: #fff; }
+    color: #ffffff; }
   .contact .cont-form__email, .contact .cont-form__message, .contact .cont-form__subject, .contact .cont-form__company {
     padding: 10px 20px;
     -webkit-border-radius: 5px;
             border-radius: 5px;
     margin-top: 20px;
-    color: #777;
-    border: 1px solid #777;
+    color: #777777;
+    border: 1px solid #777777;
     font-size: 14px;
     font-style: italic; }
   .contact .cont-form__email, .contact .cont-form__message {
@@ -11805,10 +11812,10 @@ body {
   background-image: url("../img/bg-keep.jpg");
   padding: 60px 0 50px 0; }
   .keep__title {
-    color: #fff;
+    color: #ffffff;
     margin-bottom: 0; }
   .keep__descr {
-    color: #fff;
+    color: #ffffff;
     margin-bottom: 0; }
   .keep .keep-form {
     margin-top: 10px;
@@ -11817,7 +11824,7 @@ body {
       -webkit-box-sizing: border-box;
               box-sizing: border-box;
       height: 74px;
-      border: 1px solid #777;
+      border: 1px solid #777777;
       font-size: 14px;
       font-style: italic;
       vertical-align: middle; }
@@ -11842,52 +11849,96 @@ body {
       transition: background-color 0.3s ease; }
       .keep .keep-form__btn .fa {
         font-size: 40px;
-        color: #fff; }
+        color: #ffffff; }
       .keep .keep-form__btn:hover {
         background-color: #019397; }
 
 .footer {
-  position: relative;
-  height: 270px;
-  background-image: url("../img/bg-footer.jpg"); }
-  .footer .footer-nav {
-    width: 100%;
-    font-size: 12px;
-    color: #fff; }
-    .footer .footer-nav__social {
-      list-style-type: none;
-      float: right; }
-    .footer .footer-nav__soc {
-      display: inline-block; }
-    .footer .footer-nav__link {
-      color: #fff;
-      text-decoration: none; }
+  background: url("../img/bg-footer.jpg") no-repeat center center/cover;
+    background-color: #ffffff; }
+  .footer-nav {
+    padding: 0;
+    margin-top: 0.5em;
+    vertical-align: middle;
+    display: inline-block; }
+    .footer-nav__item {
+      display: inline-block;
+      padding: 10px; }
+      .footer-nav__item:after {
+        margin-left: 20px;
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        border: 3px solid #ffffff;
+        -webkit-border-radius: 50%;
+                border-radius: 50%; }
+      .footer-nav__item:last-child:after {
+        display: none; }
+    .footer-nav__link {
+      color: #ffffff; }
+      .footer-nav__link:hover {
+        color: #29d9c2; }
+  .footer-social {
+    display: inline-block;
+    float: right;
+    margin-top: 1em; }
+    .footer-social__item {
+      display: inline-block;
+      margin-right: 10px; }
+    .footer-social__link {
+      position: relative;
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      border: 1px solid #ffffff;
+      color: #ffffff;
+      -webkit-border-radius: 50%;
+              border-radius: 50%; }
+      .footer-social__link:hover {
+        border-color: #29d9c2;
+        color: #29d9c2; }
+    .footer-social__link .fa {
+      color: inherit; }
+  .footer__copyright {
+    text-align: center;
+    margin-top: 60px;
+    color: #ffffff;
+    margin-bottom: 0; }
+
+@media (max-width: 485px) {
+  .footer-nav {
+    text-align: center;
+    display: block;
+    margin: 0 auto; }
+  .footer-social {
+    display: block;
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 1em; }
   .footer__copy {
-    position: absolute;
-    bottom: 20px;
-    margin-bottom: 0;
-    color: #fff;
-    font-size: 12px; }
-  .footer .yok-colors {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    font-size: 0; }
-    .footer .yok-colors__item {
-      height: 20px;
-      width: 20%;
-      display: inline-block; }
-      .footer .yok-colors__item--yellow {
-        background-color: #ffffa6; }
-      .footer .yok-colors__item--green {
-        background-color: #bdf271; }
-      .footer .yok-colors__item--turquoise {
-        background-color: #29d9c2; }
-      .footer .yok-colors__item--blue {
-        background-color: #01a2a6; }
-      .footer .yok-colors__item--dark {
-        background-color: #2f2933; }
+    margin-top: 2em; } }
+
+.yok-colors {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 0; }
+  .yok-colors__item {
+    height: 20px;
+    width: 20%;
+    display: inline-block; }
+    .yok-colors__item--yellow {
+      background-color: #ffffa6; }
+    .yok-colors__item--green {
+      background-color: #bdf271; }
+    .yok-colors__item--turquoise {
+      background-color: #29d9c2; }
+    .yok-colors__item--blue {
+      background-color: #01a2a6; }
+    .yok-colors__item--dark {
+      background-color: #2f2933; }
 
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
