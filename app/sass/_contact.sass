@@ -1,11 +1,113 @@
-.contact
-    position: relative
-    background-image: url('../img/bg-contact.jpg')
-    background-repeat: no-repeat
-    background-position: center bottom
-    padding: 80px 0
-    color: $color-white
+// .contact
+//   position: relative
+//   background-image: url('../img/bg-contact.jpg')
+//   background-repeat: no-repeat
+//   background-position: center bottom
+//   padding: 80px 0
+//   color: $color-white
 
+//   &:before
+//   content: ''
+//   position: absolute
+//   top: 0
+//   left: 0
+//   width: 100%
+//   height: 100%
+//   background-color: rgba($color-green-dark, .9)
+
+//   &__title
+//   text-align: center
+//   margin-bottom: 100px
+//   color: $color-white
+
+//   .cont-form
+//   &__email, &__message, &__subject, &__company
+//   padding: 10px 20px
+//   border-radius: 5px
+//   margin-top: 20px
+//   color: $color-default
+//   border: 1px solid $color-default
+//   font-size: 14px
+//   font-style: italic
+        
+//   &__email, &__message
+//   width: 100%
+
+//   &__email
+//   margin-top: 0
+
+//   &__subject
+//   float: right
+//   width: 48%
+
+//   &__company
+//   width: 48%
+
+//   &__message
+//   box-sizing: border-box
+//   height: 95px
+
+//   &__btn
+//   margin-top: 15px
+//   float: right
+//   background-color: #c3f37f
+
+//   &__subtitle
+//   font-size: 44px
+//   font-weight: 300
+
+//   &__addr, &__tel
+//   font-size: 12px
+//   margin-bottom: 0
+
+//   .fa
+//   margin-right: 5px
+
+//   &__addr
+//   margin-top: 35px
+
+//   &__find
+//   font-size: 14px
+//   text-transform: uppercase
+//   font-style: italic
+//   color: $color-yellow
+//   text-decoration: none
+//   transition: color $time ease
+//   padding-left: 20px
+        
+//   &:hover
+//   color: $color-green-light
+//   text-decoration: none
+
+//   &__or
+//   position: absolute
+//   @extend %ham
+//   text-transform: uppercase
+//   top: 260px
+//   font-size: 14px
+//   font-weight: 700
+
+
+
+
+html
+    font-size: $font-size-html
+
+.sc 
+    min-width: 70%
+
+a 
+    text-decoration: none 
+    color: $color-white
+    &:hover, &:visited, &:focus
+        text-decoration: none 
+        color: $color-white
+        opacity: 0.5
+h1, h2, h3, h4, h5
+    margin: 0
+
+.contact
+    @include block(relative, url('../img/bg-contact.jpg'), no-repeat, center bottom, cover, 60px 0, #ffffff)
     &:before
         content: ''
         position: absolute
@@ -14,77 +116,107 @@
         width: 100%
         height: 100%
         background-color: rgba($color-green-dark, .9)
+    &__h2
+        font-family: 'chunkfive'
+        font-size: $font-size-h2
+        text-transform: capitalize
+        margin-bottom: 5rem
 
-    &__title
-        text-align: center
-        margin-bottom: 100px
-        color: $color-white
-
-    .cont-form
-        &__email, &__message, &__subject, &__company
-            padding: 10px 20px
-            border-radius: 5px
-            margin-top: 20px
-            color: $color-default
-            border: 1px solid $color-default
-            font-size: 14px
-            font-style: italic
-        
-        &__email, &__message
-            width: 100%
-
-        &__email
-            margin-top: 0
-
-        &__subject
-            float: right
-            width: 48%
-
-        &__company
-            width: 48%
-
-        &__message
-            box-sizing: border-box
-            height: 95px
-
-        &__btn
-            margin-top: 15px
-            float: right
-            background-color: #c3f37f
-
-    &__subtitle
-        font-size: 44px
-        font-weight: 300
-
-    &__addr, &__tel
-        font-size: 12px
-        margin-bottom: 0
-
-        .fa
-            margin-right: 5px
-
-    &__addr
-        margin-top: 35px
+    &__form
+        &--input
+            @include cont_form('lato-mediumitalic-lato', $font-size-input, capitalize, 4%, 5%, 0.5rem )
+            &:nth-child(2)
+                width: 48%
+                float: left
+            &:nth-child(3)
+                width: 48%
+            [placeholder]
+                text-overflow: ellipsis
+        &--textarea
+            @include cont_form('lato-mediumitalic-lato', $font-size-input, capitalize, 3rem, 5%, 0.5rem )
+        &--button
+            @include cont_form('lato-heavy-lato', $font-size-btn, uppercase, 0, 5%, 30rem )
+            color: $color-white
+            line-height: 1
+            background-color: $color-green-button
+            &:hover
+                background-color: darken($color-green-button, 5%)
 
     &__find
-        font-size: 14px
-        text-transform: uppercase
-        font-style: italic
-        color: $color-yellow
-        text-decoration: none
-        transition: color $time ease
-        padding-left: 20px
-        
-        &:hover
-            color: $color-green-light
-            text-decoration: none
+        &--h3
+            @include cont_find('lato-light-lato', $font-size-h3, 1, 2rem)
+        &--i
+            float: left
+            margin-right: 2rem
+            line-height: $font-size-find
+        p 
+            @include cont_find('lato-regular-lato', $font-size-find, 1, 0)
+            overflow: hidden
+        a 
+            @include cont_find('lato-regular-lato', $font-size-find, 1, 0)
+        &--map 
+            @include cont_find('lato-regular-lato', $font-size-find, 1, 0)
+            margin-left: 3.5rem
+            text-transform: uppercase
+            font-style: italic
+            color: $color-maps
+            &:hover, , &:visited, &:focus
+                color: $color-maps
+        &--or   
+            margin-top: 9.5rem
+            text-transform: uppercase
+            font-size: $font-size-input
+        &--item
+            line-height: $font-size-find
+            margin-bottom: 1.5rem
 
-    &__or
-        position: absolute
-        @extend %ham
-        text-transform: uppercase
-        top: 260px
-        font-size: 14px
-        font-weight: 700
 
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+    /**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+    /**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+    /**/
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 576px)
+   /**/
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 350px)
+    /**/
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 321px)
+    /**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 577px)
+    /**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 769px)
+    html
+        font-size: 0.7vw
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 993px)
+    /**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1201px)
+    /**/
 

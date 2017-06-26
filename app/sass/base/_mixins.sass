@@ -15,3 +15,35 @@
 	transition-duration: $time
 	transition-timing-function: ease
 	transition-property: $properies
+
+
+/*Block*/
+
+@mixin block($pos, $bg-i, $bh-r, $bg-pos, $bg-s, $pad, $col)
+	position: $pos
+	background-image: $bg-i
+	background-repeat: $bh-r
+	background-position: $bg-pos
+	background-size: $bg-s
+	padding: $pad
+	color: $col
+
+/*Contact*/
+
+@mixin cont_form($font-famly, $font-size, $text-trans, $margin-bot, $padding, $border-radius)
+	font-family: $font-famly
+	font-size: $font-size
+	text-transform: $text-trans
+	margin-bottom: $margin-bot
+	padding: $padding
+	border-radius: $border-radius
+
+/*Subscribe*/
+
+@mixin cont_find($font-famly, $font-size, $line-height, $marg-bot)
+	font-family: $font-famly
+	font-size: $font-size
+	line-height: $line-height
+	margin-bottom: $marg-bot
+
+	
