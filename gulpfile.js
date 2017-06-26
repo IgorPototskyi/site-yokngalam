@@ -63,11 +63,23 @@ gulp.task('sass', () => {
 		.pipe(sass({outputStyle: 'expand'}).on("error", notify.onError()))
 		.pipe(rename({suffix: '.min', prefix : ''}))
 		.pipe(autoprefixer(['last 15 versions']))
+		.pipe(postcss([mqpacker()]))
 		// .pipe(cleanCSS()) // Опционально, закомментировать при отладке
 		.pipe(gulp.dest('app/css'))
 		.pipe(browserSync.reload({stream: true}));
 	}, 500)
 })
+
+// gulp.task('sass', function() {
+//     setTimeout(function() {
+//         return gulp.src('assets/scss/**/*.scss')
+//             .pipe(sass())
+//             .pipe(autoprefixer(['last 5 versions', '> 1%'], { cascade: true }))
+//             .pipe(postcss([mqpacker()]))
+//             .pipe(gulp.dest('assets/css'))
+//             .pipe(browserSync.reload({ stream: true }));
+//     }, 100);
+// });
 
 // gulp.task('sass', function() {
 // 	return gulp.src('app/sass/**/*.sass')

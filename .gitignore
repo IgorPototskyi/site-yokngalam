@@ -3,3 +3,6 @@
 /**/*.psd
 /**/Thumbs.db
 /**/*.DS_Store
+app/css
+dist/
+gulpfile.js
